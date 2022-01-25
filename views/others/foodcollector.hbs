@@ -55,47 +55,31 @@
       <th scope="col">Exact Location</th>
       <th scope="col">District</th>
       <th scope="col">Food Item</th>
-      <th scope="col">Available Quandity</th>
-      <th scope="col">Select Quandity</th>
+      <th scope="col">Available Quantity</th>
+      <th scope="col">Select Quantity</th>
        <th scope="col"></th>
       
     </tr>
   </thead>
-  <tbody>
+  
+  <tbody>{{#each donate}}
+      
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td><input type="number" id="quantity" name="quantity" min="1" max="5" value="3"></td>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.mobileno}}</td>
+      <td>{{this.place}}</td>
+      <td>{{this.district}}</td>
+      <td>{{this.food}}</td>
+      <td>{{this.quantity}}</td>
+      
+      <td><input type="number" id="quantity" name="quantity" min="1" max={{this.quantity}} value="1"></td>
      <td><center><a href="#"><button type="button" class="btn btn-danger">Request</button></center></a></td>
-
-     
-      
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-            <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>
-      <td><center><a href="#"><button type="button" class="btn btn-danger">Request</button></center></a></td>
-
-     
-   
-      
-    </tr>
-    
+    </tr>{{/each}}
   </tbody>
 </table>
         </div>
-   
+  
 </section>
 </div>
 

@@ -1,8 +1,15 @@
 const mongoose = require('mongoose');
 
-main().catch(err => console.log(err));
+ mongoose.connect(
+   "mongodb://127.0.0.1:27017/Demo",
+   { 
+     useNewUrlParser: true,
+     useUnifiedTopology: true,
+    },
+    function(err,db)
+     {
+        if(err) throw err;
+       var database = mongoose.connection;
+       console.log('Database Created Successfully')
+ });
 
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017');
-  console.log('connected')
-}

@@ -43,9 +43,10 @@
 
  <div class="cont3">
       <h2 class="donatorh2">Donate Now</h2>
+      <form action="/login" method="POST" autocomplete="off">
        <label class="donaterhomelabel">
         <span>Name</span>
-        <input type="text" name="name">
+        <input type="text" name="name" required>
       </label>
       <label class="donaterhomelabel">
         <span>Mobile No</span>
@@ -80,15 +81,16 @@
         <input type="text" name="food">
       </label>
        <label class="donaterhomelabel">
-        <span>Quandity</span>
+        <span>Quantity</span>
         <input type="number" name="quandity">
       </label><center>
-        <button class="submit" type="button">Submit</button>
-        
-      
+        <button class="submit" type="submit">Submit</button>
+         
+         
       </center>
+      </form>
     </div>
-    </div>
+    {{!-- </div>{{#each donate}} <p>{{this.name}}</p>  {{/each}} --}}
 
 
     <!-- Optional JavaScript; choose one of the two! -->
