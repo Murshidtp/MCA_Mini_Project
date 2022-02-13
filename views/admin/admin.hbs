@@ -24,12 +24,37 @@
         <li class="nav-item">
           <a class="nav-link" href="/admin/view-foodcollector">Verifications</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/admin/view-donator">View Donators</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/admin/food-needer">View Food Needers</a>
+        </li>
+         <select id="districtDropdown" oninput="filterTable()" class="search">
+  <option>Select District</option>
+  <option>Alappuzha</option>
+  <option>Ernamkulam</option>
+  <option>Idukki</option>
+  <option>Kannur</option>
+  <option>Kasargod</option>
+  <option>Kollam</option>
+  <option>Kottayam</option>
+  <option>Kozhikkode</option>
+  <option>Malappuram</option>
+  <option>Palakkad</option>
+  <option>Pathanamthitta</option>
+  <option>Thiruvananthapuram</option>
+  <option>Thrissur</option>
+  <option>Wayanad</option>
+</select>
+       
+       
        
         </li>
       </ul>
        <form class="d-flex">
         {{!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> --}}
-        <button class="btn btn-danger" type="submit">Logout</button>
+        <a href="/" class="link"><button class="logout" type="button">Logout</button></a>
       </form>
         
         </div>
@@ -41,40 +66,30 @@
      <table class="table table-bordered border-light">
   <thead class="color-light">
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">Name</th>
-      <th scope="col">Mobile No</th>
-      <th scope="col">Exact Location</th>
-      <th scope="col">District</th>
+      <th scope="col">Category</th>
+      <th scope="col">District</th>     
       <th scope="col">Food Item</th>
-      <th scope="col">Quandity</th>
+      <th scope="col">Total Quandity</th>
+      <th scope="col">Requested Quandity</th>
+
+      
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
       
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-            <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+      <td><center> <a href="#" class="link"><button class="accept" type="button">Accept</button></a></center></td>
+      <td><center> <a href="#" class="link"><button class="reject" type="button">Reject</button></a></center></td>
    
       
     </tr>

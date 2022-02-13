@@ -1,29 +1,44 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next){
-    let donate = [
-        {
-            id : "1",
-            name : "Murshid",
-            mobileno : "7907406874",
-            place : "makkarapparamba",
-            district : "malappuram",
-            food :"meals",
-            quantity: "5"
-        },
-        {
-            id : "2",
-            name : "Murshid",
-            mobileno : "7907406874",
-            place : "makkarapparamba",
-            district : "malappuram",
-            food :"meals",
-            quantity: "7"
-        }
-    ]
-    res.render('others/foodcollector', {donate});
+var Donator = require('../Models/donatormodel')
+var Food = require('../Models/foodmodel');
+var FoodDetails = require('../Models/foodmodel');
+const dotenv = require('dotenv')
 
+dotenv.config()
+
+
+router.get('/', (req,res) => {
+    FoodDetails.find((err, docs) => {
+    if(!err){
+        res.render("others/foodcollector", {
+    list: docs
+    });
+    }
+    else {
+    console.log('Failed to retrieve the Course List: '+ err);
+    }
+    });
+    });  
+
+    router.get('/contact', function(req, res, next){
+        res.render('contact', {});
+    });
+    router.get('/about', function(req, res, next){
+        res.render('about', {});
+    });
+
+
+ 
+
+    
+router.get('/message', function(req, res, next){
+    res.render('others/message', {});
 });
+
+
+
+
 module.exports = router;
 

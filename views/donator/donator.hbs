@@ -23,17 +23,17 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="/donatorhome/contact">Contact</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/donatorhome/about">About</a>
         </li>
        
         </li>
       </ul>
        <form class="d-flex">
         {{!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> --}}
-        <button class="btn btn-danger" type="submit">Logout</button>
+        <a href="/" class="link"><button class="logout" type="button">Logout</button></a>
       </form>
         
         </div>
@@ -43,10 +43,10 @@
 
  <div class="cont3">
       <h2 class="donatorh2">Donate Now</h2>
-      <form action="/login" method="POST" autocomplete="off">
+      <form action="/donatorhome" method="POST" autocomplete="on">
        <label class="donaterhomelabel">
         <span>Name</span>
-        <input type="text" name="name" required>
+        <input type="text" name="name">
       </label>
       <label class="donaterhomelabel">
         <span>Mobile No</span>
@@ -56,24 +56,24 @@
         <span>Exact Location</span>
         <input type="text" name="location">
       </label>
-      <label class="donaterhomelabel" for="district"><span>District</span></label>
+      <label class="donaterhomelabel" for="district" name="district"><span>District</span></label>
       <label class="donaterhomelabel">
-        <select class="otherslabel" id="category">
+        <select class="otherslabel" id="category" name="district">
           <option value="" selected disabled hidden><span>Select District</span></option>
-          <option value="orphanege"><span>Alappuzha</span></option>
-          <option value="orphanege"><span>Ernamkulam</span></option>
-          <option value="orphanege"><span>Idukki</span></option>
-          <option value="orphanege"><span>Kannur</span></option>
-          <option value="orphanege"><span>Kasargod</span></option>
-          <option value="orphanege"><span>Kollam</span></option>
-          <option value="orphanege"><span>Kottayam</span></option>
-          <option value="orphanege"><span>Kozhikkode</span></option>
-          <option value="orphanege"><span>Malappuram</span></option>
-          <option value="orphanege"><span>Palakkad</span></option>
-          <option value="orphanege"><span>Pathanamthitta</span></option>
-          <option value="orphanege"><span>Thiruvananthapuram</span></option>
-          <option value="orphanege"><span>Thrissur</span></option>
-          <option value="orphanege"><span>Wayanad</span></option>
+          <option value="Alappuzha"><span>Alappuzha</span></option>
+          <option value="Ernamkulam"><span>Ernamkulam</span></option>
+          <option value="Idukki"><span>Idukki</span></option>
+          <option value="Kannur"><span>Kannur</span></option>
+          <option value="Kasargod"><span>Kasargod</span></option>
+          <option value="Kollam"><span>Kollam</span></option>
+          <option value="Kottayam"><span>Kottayam</span></option>
+          <option value="Kozhikkode"><span>Kozhikkode</span></option>
+          <option value="Malappuram"><span>Malappuram</span></option>
+          <option value="Palakkad"><span>Palakkad</span></option>
+          <option value="Pathanamthitta"><span>Pathanamthitta</span></option>
+          <option value="Thiruvanathapuram"><span>Thiruvananthapuram</span></option>
+          <option value="Thrissur"><span>Thrissur</span></option>
+          <option value="Wayanad"><span>Wayanad</span></option>
         </select>
       </label>
      <label class="donaterhomelabel">
@@ -82,10 +82,10 @@
       </label>
        <label class="donaterhomelabel">
         <span>Quantity</span>
-        <input type="number" name="quandity">
+        <input type="number" name="quantity">
       </label><center>
-        <button class="submit" type="submit">Submit</button>
-         
+        <input type="submit" value="Submit" class="submit">
+
          
       </center>
       </form>

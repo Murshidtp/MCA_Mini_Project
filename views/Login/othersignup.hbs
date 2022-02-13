@@ -9,46 +9,47 @@
   <body>
     <div class="cont2">
       <h2 class="donatorh2">Sign up</h2>
-      <label class="otherslabel" for="category"><span>Category</span></label>
+      <form action="/others" method="POST" autocomplete="on">
+      <label class="otherslabel" for="category" name="category"><span>Category</span></label>
       <label class="otherslabel">
-        <select class="otherslabel" id="category">
+        <select class="otherslabel" id="category" name="category">
           <option value="" selected disabled hidden><span>Select Category</span></option>
-          <option value="orphanege"><span>Orphaneges</span></option>
-          <option value="oldagehome"><span>Old age Homes</span></option>
-          <option value="socialworker"><span>Social Workers</span></option>
+          <option value="Orphanege"><span>Orphaneges</span></option>
+          <option value="Oldagehome"><span>Old age Homes</span></option>
+          <option value="Socialworkers"><span>Social Workers</span></option>
         </select>
       </label>
       <label class="otherslabel">
         <span>Name</span>
-        <input type="text" name="uname" />
+        <input type="text" name="name" />
       </label>
       <label class="otherslabel">
         <span>Place</span>
-        <input type="text" name="location" />
+        <input type="text" name="place" />
       </label>
-      <label class="otherslabel" for="district"><span>District</span></label>
+      <label class="otherslabel" for="district" name="district"><span>District</span></label>
       <label class="otherslabel">
-        <select class="otherslabel" id="category">
+        <select class="otherslabel" id="category" name="district">
           <option value="" selected disabled hidden><span>Select District</span></option>
-          <option value="orphanege"><span>Alappuzha</span></option>
-          <option value="orphanege"><span>Ernamkulam</span></option>
-          <option value="orphanege"><span>Idukki</span></option>
-          <option value="orphanege"><span>Kannur</span></option>
-          <option value="orphanege"><span>Kasargod</span></option>
-          <option value="orphanege"><span>Kollam</span></option>
-          <option value="orphanege"><span>Kottayam</span></option>
-          <option value="orphanege"><span>Kozhikkode</span></option>
-          <option value="orphanege"><span>Malappuram</span></option>
-          <option value="orphanege"><span>Palakkad</span></option>
-          <option value="orphanege"><span>Pathanamthitta</span></option>
-          <option value="orphanege"><span>Thiruvananthapuram</span></option>
-          <option value="orphanege"><span>Thrissur</span></option>
-          <option value="orphanege"><span>Wayanad</span></option>
+          <option value="Alappuzha"><span>Alappuzha</span></option>
+          <option value="Ernamkulam"><span>Ernamkulam</span></option>
+          <option value="Idukki"><span>Idukki</span></option>
+          <option value="Kannur"><span>Kannur</span></option>
+          <option value="Kasargod"><span>Kasargod</span></option>
+          <option value="Kollam"><span>Kollam</span></option>
+          <option value="Kottayam"><span>Kottayam</span></option>
+          <option value="Kozhikkode"><span>Kozhikkode</span></option>
+          <option value="Malappuram"><span>Malappuram</span></option>
+          <option value="Palakkad"><span>Palakkad</span></option>
+          <option value="Pathanamthitta"><span>Pathanamthitta</span></option>
+          <option value="Thiruvanathapuram"><span>Thiruvananthapuram</span></option>
+          <option value="Thrissur"><span>Thrissur</span></option>
+          <option value="Wayanad"><span>Wayanad</span></option>
         </select>
       </label>
       <label class="otherslabel">
-        <span>Mobile No</span>
-        <input type="tel" name="mobile" />
+        <span>Phone Number</span>
+        <input type="tel" name="phone" />
       </label>
       <label class="otherslabel">
         <span>Email</span>
@@ -60,11 +61,12 @@
       </label>
       <label class="otherslabel">
         <span> Confirm Password</span>
-        <input type="password" name="password" />
+        <input type="password" name="confirmpass" />
       </label><center>
-        <button class="submit" type="button">Submit</button>
+        <input type="submit" value="Submit" class="submit">
 
       </center>
+      </form>
 
     </div>
   </body>

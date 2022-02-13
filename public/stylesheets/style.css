@@ -144,7 +144,9 @@ thead,tbody{
 
 .adminh2{
   color: white;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
+  position: fixed;
+  margin-top: -105px;
 }
 .donator{
   width: 100%;
@@ -174,6 +176,44 @@ padding: 15px;
 tbody,thead{
   text-align: center;
 }
-/* .submitbutton{
-  width: 260px;
-} */
+section{
+  /* position: absolute; */
+  width: 98%;
+  position: fixed;
+  margin-top: -50px;
+}
+.logout{
+  background-color: red;
+  width: 150px;
+  color: black;
+}
+.link{
+  text-decoration: none;
+}
+.contact{
+  display: block;
+  width: 360px;
+  margin: 20px auto 0;
+  text-align: center;
+
+}
+.request{
+  background-color: rgb(243, 229, 32);
+  width: 150px;
+  color: black;
+}
+.accept{
+  background-color: rgb(57, 168, 5);
+  width: 150px;
+  color: black;
+}
+.reject{
+  background-color: rgb(219, 2, 2);
+  width: 150px;
+  color: black;
+}
+.search{
+  width: 200px;
+  margin-right: 10px;
+  margin-top: 2px;
+}
